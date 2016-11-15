@@ -1,0 +1,27 @@
+<link href="/template.css"
+      rel="stylesheet" type="text/css">
+
+<title>Cloudbook - Guardar</title>
+
+<div class="col-md-6 center font">
+  <div class="logo">
+    <a href="/"><img class="logo-spacer" src="/images/logo.png"></a>
+  </div>
+
+  	<div class="panel">
+  		<div class="panel-content">
+			<h3 class="title">Guardar nuevo usuario</h3>
+
+			<form action="http://localhost:8000/saved" method="get">
+				Nombre: <input type="text" name="nombre"/><br>
+				Celular: <input type="number" name="telefono"/><br>
+			  	Numero de identidad: <input type="number" name="id"/><br>
+			  	Correo: <input type="text" name="correo"/><br>
+			  	Edad: <input type="text" name="edad"/><br>
+			  	<div class="button-margin">
+					<input class="button" type="submit" value="Enviar"/>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

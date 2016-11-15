@@ -1,0 +1,52 @@
+<link href="/template.css"
+      rel="stylesheet" type="text/css">
+
+<title>Cloudbook - Listado</title>
+
+<div class="col-md-6 center font">
+  <div class="logo">
+    <a href="/"><img class="logo-spacer" src="/images/logo.png"></a>
+  </div>
+
+  <div class="panel-content">
+
+    <h3 class="title">Listado de Agenda</h3>
+
+    <table class="table table-bordered" cellpadding="5">
+    	<tbody>
+    		<th>Nombre</th>
+    		<th>Celular</th>
+    		<th>Numero identidad</th>
+    		<th>Correo</th>
+    	  <th>Edad</th>
+      	<% for(var i=0;i<usuarios.length;i++) { %>
+      		<tr>
+      			<td>
+      				<%= usuarios[i][0] %>
+      			</td>
+      			<td>
+      				+504 <%= usuarios[i][1] %>
+      			</td>
+      			<td>
+      				<%= usuarios[i][2] %>
+      			</td>
+      			<td>
+      				<a href="mailto:<%= usuarios[i][3] %>"> <%= usuarios[i][3] %> </a>
+      			</td>
+      			<td>
+      				<%= usuarios[i][4] %>
+      			</td>
+      		</tr>
+      <% } %>
+    	</tbody>
+    </table>
+    <br/>
+
+    <form action="http://localhost:8000/" method="get">
+      <div class="button-margin">
+        <button class="button">Regresar a Menu</button>
+      </div>
+    </form>
+
+  </div>
+</div>

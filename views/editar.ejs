@@ -1,0 +1,67 @@
+<link href="/template.css"
+      rel="stylesheet" type="text/css">
+
+<title>Cloudbook - Editar</title>
+
+<div class="col-md-6 center font">
+  <div class="logo">
+    <a href="/"><img class="logo-spacer" src="/images/logo.png"></a>
+  </div>
+  
+  <h3 class="title">Editar usuario de Agenda</h3>
+
+  <table class="table table-bordered" cellpadding="5" style="margin-bottom: 20px;">
+  	<tbody>
+  		<th>Nombre</th>
+  		<th>Celular</th>
+  		<th>Numero identidad</th>
+  		<th>Correo</th>
+  	  <th>Edad</th>
+    	<% for(var i=0;i<usuarios.length;i++) { %>
+    		<tr>
+    			<td>
+    				<%= usuarios[i][0] %>
+    			</td>
+    			<td>
+    				+504 <%= usuarios[i][1] %>
+    			</td>
+    			<td>
+    				<%= usuarios[i][2] %>
+    			</td>
+    			<td>
+    				<%= usuarios[i][3] %>
+    			</td>
+    			<td>
+    				<%= usuarios[i][4] %>
+    			</td>
+    		</tr>
+    <% } %>
+  	</tbody>
+  </table>
+
+  <div class="panel">
+    <div class="panel-content">
+      <p>
+        <strong>
+          Escriba el nombre del usuario que desea editar igual a como aparece en el listado
+        </strong>
+      </p>
+
+      <form action="http://localhost:8000/edited" method="get">
+        Nombre a editar: <input type="text" name="nombreEdit"/>
+
+        <p>
+          <strong>
+            Escriba los nuevos datos que sea editar
+          </strong>
+        </p>
+        Nombre: <input type="text" name="nombre"/><br>
+        Celular: <input type="number" name="telefono"/><br>
+        Numero de identidad: <input type="number" name="id"/><br>
+        Correo: <input type="text" name="correo"/><br>
+        Edad: <input type="text" name="edad"/><br>
+        <div class="button-margin">
+          <input class="button" type="submit" value="Salvar"/>
+        </div>
+      </form>
+</div>
